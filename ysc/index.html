@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใบสมัครกิจกรรมประกวดสื่อ "เยาวชนรุ่นใหม่ใส่ใจสิทธิชุมชน" | สถาบันพระปกเกล้า</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kpi-navy: #1B2A4A;
+            --kpi-gold: #C5A55A;
+            --kpi-gold-light: #E8D5A0;
+            --kpi-blue: #2C5F8A;
+            --kpi-blue-light: #3A7DB8;
+            --kpi-cream: #FDF8EF;
+            --kpi-white: #FFFFFF;
+            --kpi-gray-50: #F9FAFB;
+            --kpi-gray-100: #F3F4F6;
+            --kpi-gray-200: #E5E7EB;
+            --kpi-gray-300: #D1D5DB;
+            --kpi-gray-400: #9CA3AF;
+            --kpi-gray-600: #4B5563;
+            --kpi-gray-700: #374151;
+            --kpi-gray-800: #1F2937;
+            --kpi-red: #DC2626;
+            --kpi-green: #16A34A;
+            --shadow-sm: 0 1px 2px rgba(27,42,74,0.06);
+            --shadow-md: 0 4px 12px rgba(27,42,74,0.08);
+            --shadow-lg: 0 8px 30px rgba(27,42,74,0.12);
+            --shadow-xl: 0 20px 50px rgba(27,42,74,0.15);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', 'Noto Sans Thai', sans-serif;
+            background: var(--kpi-cream);
+            color: var(--kpi-gray-800);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* === HEADER === */
+        .page-header {
+            background: linear-gradient(135deg, var(--kpi-navy) 0%, #243656 50%, var(--kpi-blue) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(197,165,90,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(44,95,138,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: rgba(197,165,90,0.15);
+            border: 1px solid rgba(197,165,90,0.3);
+            color: var(--kpi-gold-light);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 6px 20px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .header-project {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--kpi-gold-light);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .header-activity {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--kpi-white);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .header-activity-en {
+            font-size: 18px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
+
+        .header-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--kpi-gold);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+
+        .header-org {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            font-weight: 400;
+        }
+
+        .header-org strong {
+            color: rgba(255,255,255,0.85);
+            font-weight: 600;
+        }
+
+        /* === FORM CONTAINER === */
+        .form-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 16px 60px;
+        }
+
+        /* === SECTION CARDS === */
+        .section-card {
+            background: var(--kpi-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin-top: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.04);
+            animation: fadeUp 0.5s ease both;
+        }
+
+        .section-card:nth-child(2) { animation-delay: 0.05s; }
+        .section-card:nth-child(3) { animation-delay: 0.1s; }
+        .section-card:nth-child(4) { animation-delay: 0.15s; }
+        .section-card:nth-child(5) { animation-delay: 0.2s; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, var(--kpi-navy), #243656);
+            padding: 18px 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(197,165,90,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--kpi-white);
+        }
+
+        .section-body {
+            padding: 28px;
+        }
+
+        /* === FORM FIELDS === */
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--kpi-gray-700);
+            margin-bottom: 8px;
+        }
+
+        .form-label .required {
+            color: var(--kpi-red);
+            margin-left: 2px;
+        }
+
+        .form-label .label-hint {
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--kpi-gray-400);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            font-family: 'Sarabun', sans-serif;
+            font-size: 15px;
+            color: var(--kpi-gray-800);
+            background: var(--kpi-gray-50);
+            border: 1.5px solid var(--kpi-gray-200);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .form-input:hover,
+        .form-select:hover,
+        .form-textarea:hover {
+            border-color: var(--kpi-gray-300);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--kpi-blue-light);
+            background: var(--kpi-white);
+            box-shadow: 0 0 0 3px rgba(44,95,138,0.1);
+        }
+
+        .form-input.error,
+        .form-select.error {
+            border-color: var(--kpi-red);
+            box-shadow: 0 0 0 3px rgba(220,38,38,0.08);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
+        }
+
+        .error-text {
+            color: var(--kpi-red);
+            font-size: 13px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        /* === RADIO CARDS === */
+        .radio-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 500px) {
+            .radio-group {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .radio-card {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .radio-card input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .radio-card-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 18px;
+            background: var(--kpi-gray-50);
+            border: 1.5px solid var(--kpi-gray-200);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .radio-card:hover .radio-card-content {
+            border-color: var(--kpi-blue-light);
+            background: rgba(44,95,138,0.03);
+        }
+
+        .radio-card input:checked + .radio-card-content {
+            border-color: var(--kpi-blue-light);
+            background: rgba(44,95,138,0.06);
+            box-shadow: 0 0 0 3px rgba(44,95,138,0.1);
+        }
+
+        .radio-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--kpi-gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .radio-card input:checked + .radio-card-content .radio-dot {
+            border-color: var(--kpi-blue-light);
+        }
+
+        .radio-dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--kpi-blue-light);
+            transform: scale(0);
+            transition: transform 0.2s ease;
+        }
+
+        .radio-card input:checked + .radio-card-content .radio-dot::after {
+            transform: scale(1);
+        }
+
+        .radio-card-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--kpi-gray-700);
+            line-height: 1.4;
+        }
+
+        .radio-card-icon {
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        /* === MEMBER BLOCK === */
+        .member-block {
+            background: var(--kpi-gray-50);
+            border: 1px solid var(--kpi-gray-200);
+            border-radius: var(--radius);
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        .member-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .member-block-title {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--kpi-navy);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--kpi-gray-200);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .member-block-title .member-num {
+            background: var(--kpi-navy);
+            color: var(--kpi-gold-light);
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .field-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .field-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* === FILE UPLOAD === */
+        .file-upload-area {
+            border: 2px dashed var(--kpi-gray-300);
+            border-radius: var(--radius);
+            padding: 36px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: var(--kpi-gray-50);
+        }
+
+        .file-upload-area:hover,
+        .file-upload-area.dragover {
+            border-color: var(--kpi-blue-light);
+            background: rgba(44,95,138,0.04);
+        }
+
+        .file-upload-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+            opacity: 0.6;
+        }
+
+        .file-upload-text {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--kpi-gray-600);
+            margin-bottom: 6px;
+        }
+
+        .file-upload-hint {
+            font-size: 13px;
+            color: var(--kpi-gray-400);
+        }
+
+        .file-upload-btn {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 8px 24px;
+            background: var(--kpi-blue);
+            color: white;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .file-upload-btn:hover {
+            background: var(--kpi-blue-light);
+        }
+
+        .file-list {
+            margin-top: 14px;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--kpi-white);
+            border: 1px solid var(--kpi-gray-200);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .file-item-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .file-item-icon { font-size: 20px; flex-shrink: 0; }
+
+        .file-item-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 500;
+            color: var(--kpi-gray-700);
+        }
+
+        .file-item-size {
+            color: var(--kpi-gray-400);
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .file-item-remove {
+            background: none;
+            border: none;
+            color: var(--kpi-red);
+            cursor: pointer;
+            font-size: 18px;
+            padding: 4px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .file-item-remove:hover {
+            background: rgba(220,38,38,0.08);
+        }
+
+        /* === CONSENT === */
+        .consent-box {
+            background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+            border: 1px solid #F9DC8B;
+            border-radius: var(--radius);
+            padding: 22px;
+        }
+
+        .consent-text {
+            font-size: 14px;
+            color: var(--kpi-gray-700);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .consent-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .consent-check input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--kpi-blue);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .consent-check span {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--kpi-navy);
+        }
+
+        /* === QR CODE === */
+        .qr-section {
+            text-align: center;
+            padding: 36px 28px;
+        }
+
+        .qr-title {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--kpi-navy);
+            margin-bottom: 8px;
+        }
+
+        .qr-subtitle {
+            font-size: 14px;
+            color: var(--kpi-gray-600);
+            margin-bottom: 24px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qr-placeholder {
+            width: 180px;
+            height: 180px;
+            background: var(--kpi-gray-100);
+            border: 2px dashed var(--kpi-gray-300);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 14px;
+            color: var(--kpi-gray-400);
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .qr-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: var(--radius);
+        }
+
+        .qr-note {
+            font-size: 13px;
+            color: var(--kpi-green);
+            font-weight: 500;
+        }
+
+        .qr-line-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #06C755;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        /* === SUBMIT === */
+        .submit-section {
+            text-align: center;
+            margin-top: 28px;
+        }
+
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 56px;
+            background: linear-gradient(135deg, var(--kpi-navy), var(--kpi-blue));
+            color: var(--kpi-white);
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            letter-spacing: 0.3px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .submit-btn .btn-icon {
+            font-size: 20px;
+        }
+
+        /* === LOADING / SUCCESS === */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(27,42,74,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-box {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            animation: fadeUp 0.3s ease;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid var(--kpi-gray-200);
+            border-top-color: var(--kpi-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--kpi-navy);
+        }
+
+        .loading-subtext {
+            font-size: 13px;
+            color: var(--kpi-gray-400);
+            margin-top: 4px;
+        }
+
+        .success-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(27,42,74,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1001;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .success-overlay.active {
+            display: flex;
+        }
+
+        .success-box {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            max-width: 420px;
+            animation: fadeUp 0.4s ease;
+        }
+
+        .success-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+        }
+
+        .success-title {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--kpi-navy);
+            margin-bottom: 10px;
+        }
+
+        .success-text {
+            font-size: 15px;
+            color: var(--kpi-gray-600);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .success-btn {
+            display: inline-block;
+            padding: 12px 36px;
+            background: var(--kpi-green);
+            color: white;
+            border: none;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .success-btn:hover {
+            background: #15803D;
+        }
+
+        /* === FOOTER === */
+        .page-footer {
+            text-align: center;
+            padding: 32px 16px;
+            color: var(--kpi-gray-400);
+            font-size: 13px;
+        }
+
+        .page-footer a {
+            color: var(--kpi-blue);
+            text-decoration: none;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 600px) {
+            .header-content { padding: 36px 16px 32px; }
+            .header-activity { font-size: 22px; }
+            .header-project { font-size: 17px; }
+            .section-body { padding: 20px; }
+            .member-block { padding: 16px; }
+            .submit-btn { padding: 14px 40px; font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="header-badge">📋 ใบสมัครออนไลน์</div>
+            <p class="header-title">โครงการกฎหมายภาคประชาชน</p>
+            <p class="header-project">ว่าด้วยการบริหารจัดการขยะแห่งชาติ</p>
+            <div class="header-divider"></div>
+            <h1 class="header-activity">กิจกรรมประกวดสื่อ</h1>
+            <p class="header-activity">"เยาวชนรุ่นใหม่ใส่ใจสิทธิชุมชน"</p>
+            <p class="header-activity-en">Young & Smart Citizen</p>
+            <p class="header-org">โดย <strong>สถาบันพระปกเกล้า</strong></p>
+        </div>
+    </header>
+
+    <form id="applicationForm" class="form-container" novalidate>
+
+        <!-- SECTION 1: TEAM INFO -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">📝</div>
+                <div class="section-title">ข้อมูลทีมและผลงาน</div>
+            </div>
+            <div class="section-body">
+                <div class="form-group">
+                    <label class="form-label">ชื่อทีม <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="teamName" name="teamName" placeholder="กรอกชื่อทีม" required>
+                    <div class="error-text" id="teamNameError">กรุณากรอกชื่อทีม</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">ชื่อผลงาน <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="workTitle" name="workTitle" placeholder="กรอกชื่อผลงานที่ส่งเข้าประกวด" required>
+                    <div class="error-text" id="workTitleError">กรุณากรอกชื่อผลงาน</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">ชื่อสถานศึกษา <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="institution" name="institution" placeholder="กรอกชื่อสถานศึกษา" required>
+                    <div class="error-text" id="institutionError">กรุณากรอกชื่อสถานศึกษา</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: MEDIA TYPE -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">🎨</div>
+                <div class="section-title">สื่อที่สนใจเข้าร่วมประกวด</div>
+            </div>
+            <div class="section-body">
+                <div class="form-group">
+                    <label class="form-label">เลือกประเภทสื่อ <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-card">
+                            <input type="radio" name="mediaType" value="poster" required>
+                            <div class="radio-card-content">
+                                <div class="radio-dot"></div>
+                                <span class="radio-card-icon">🖼️</span>
+                                <span class="radio-card-label">สื่อสิ่งพิมพ์ โปสเตอร์<br>(Posters)</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="mediaType" value="social_media" required>
+                            <div class="radio-card-content">
+                                <div class="radio-dot"></div>
+                                <span class="radio-card-icon">📱</span>
+                                <span class="radio-card-label">สื่อโฆษณา ภาพนิ่ง<br>(Social Media)</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="error-text" id="mediaTypeError">กรุณาเลือกประเภทสื่อ</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: ADVISOR -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">👨‍🏫</div>
+                <div class="section-title">อาจารย์ผู้ควบคุมทีม</div>
+            </div>
+            <div class="section-body">
+                <div class="member-block">
+                    <div class="field-row">
+                        <div class="form-group">
+                            <label class="form-label">ชื่อ-นามสกุล <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="advisorName" placeholder="ชื่อ-นามสกุล" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ตำแหน่ง <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="advisorPosition" placeholder="ตำแหน่ง" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ที่อยู่ <span class="required">*</span></label>
+                        <textarea class="form-input form-textarea" name="advisorAddress" placeholder="ที่อยู่ที่ติดต่อได้" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">เบอร์โทรติดต่อ <span class="required">*</span></label>
+                        <input type="tel" class="form-input" name="advisorPhone" placeholder="0XX-XXX-XXXX" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: STUDENTS -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">👩‍🎓</div>
+                <div class="section-title">สมาชิกในทีม (นิสิต/นักศึกษา)</div>
+            </div>
+            <div class="section-body">
+
+                <!-- Student 1 -->
+                <div class="member-block">
+                    <div class="member-block-title">
+                        <span class="member-num">1</span> นิสิต/นักศึกษา คนที่ 1
+                    </div>
+                    <div class="field-row">
+                        <div class="form-group">
+                            <label class="form-label">ชื่อ-นามสกุล <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="student1Name" placeholder="ชื่อ-นามสกุล" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ตำแหน่ง <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="student1Position" placeholder="เช่น หัวหน้าทีม" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ที่อยู่ <span class="required">*</span></label>
+                        <textarea class="form-input form-textarea" name="student1Address" placeholder="ที่อยู่ที่ติดต่อได้" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">เบอร์โทรติดต่อ <span class="required">*</span></label>
+                        <input type="tel" class="form-input" name="student1Phone" placeholder="0XX-XXX-XXXX" required>
+                    </div>
+                </div>
+
+                <!-- Student 2 -->
+                <div class="member-block">
+                    <div class="member-block-title">
+                        <span class="member-num">2</span> นิสิต/นักศึกษา คนที่ 2
+                    </div>
+                    <div class="field-row">
+                        <div class="form-group">
+                            <label class="form-label">ชื่อ-นามสกุล <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="student2Name" placeholder="ชื่อ-นามสกุล" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ตำแหน่ง <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="student2Position" placeholder="เช่น ออกแบบกราฟิก" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ที่อยู่ <span class="required">*</span></label>
+                        <textarea class="form-input form-textarea" name="student2Address" placeholder="ที่อยู่ที่ติดต่อได้" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">เบอร์โทรติดต่อ <span class="required">*</span></label>
+                        <input type="tel" class="form-input" name="student2Phone" placeholder="0XX-XXX-XXXX" required>
+                    </div>
+                </div>
+
+                <!-- Student 3 -->
+                <div class="member-block">
+                    <div class="member-block-title">
+                        <span class="member-num">3</span> นิสิต/นักศึกษา คนที่ 3
+                    </div>
+                    <div class="field-row">
+                        <div class="form-group">
+                            <label class="form-label">ชื่อ-นามสกุล <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="student3Name" placeholder="ชื่อ-นามสกุล" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ตำแหน่ง <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="student3Position" placeholder="เช่น ผู้เขียนเนื้อหา" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ที่อยู่ <span class="required">*</span></label>
+                        <textarea class="form-input form-textarea" name="student3Address" placeholder="ที่อยู่ที่ติดต่อได้" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">เบอร์โทรติดต่อ <span class="required">*</span></label>
+                        <input type="tel" class="form-input" name="student3Phone" placeholder="0XX-XXX-XXXX" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: FILE UPLOAD -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">📎</div>
+                <div class="section-title">แนบไฟล์ผลงาน</div>
+            </div>
+            <div class="section-body">
+                <div class="form-group">
+                    <label class="form-label">
+                        อัปโหลดไฟล์ผลงาน <span class="required">*</span>
+                        <span class="label-hint">รองรับ .jpg, .jpeg, .png, .pdf — ขนาดไม่เกิน 10MB ต่อไฟล์ — แนบได้สูงสุด 3 ไฟล์</span>
+                    </label>
+                    <div class="file-upload-area" id="fileDropArea">
+                        <div class="file-upload-icon">📁</div>
+                        <div class="file-upload-text">ลากไฟล์มาวางที่นี่</div>
+                        <div class="file-upload-hint">หรือ</div>
+                        <div class="file-upload-btn">เลือกไฟล์</div>
+                        <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf" multiple hidden>
+                    </div>
+                    <div class="file-list" id="fileList"></div>
+                    <div class="error-text" id="fileError">กรุณาแนบไฟล์ผลงานอย่างน้อย 1 ไฟล์</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: CONSENT -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">✅</div>
+                <div class="section-title">ข้อกำหนดและเงื่อนไข</div>
+            </div>
+            <div class="section-body">
+                <div class="consent-box">
+                    <p class="consent-text">
+                        "ข้าพเจ้าขอรับรองข้อความดังกล่าวข้างต้นว่าเป็นความจริงทุกประการ และเข้าใจข้อกำหนดและเงื่อนไข 
+                        ในการเปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้า เพื่อประโยชน์ในการดำเนินงานโครงการประกวดสื่อเพื่อสร้างสำนึกพลเมือง 
+                        โดยสถาบันจะดูแลจัดเก็บข้อมูลในระบบที่ปลอดภัย และจะใช้ข้อมูลตามวัตถุประสงค์ที่แจ้งไว้เท่านั้น"
+                    </p>
+                    <label class="consent-check">
+                        <input type="checkbox" id="consentCheck" required>
+                        <span>ข้าพเจ้ายอมรับข้อกำหนดและเงื่อนไข</span>
+                    </label>
+                    <div class="error-text" id="consentError">กรุณายอมรับข้อกำหนดและเงื่อนไข</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 7: QR CODE -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">💬</div>
+                <div class="section-title">เข้าร่วมกลุ่มไลน์ประกวด</div>
+            </div>
+            <div class="qr-section">
+                <p class="qr-title">กิจกรรมประกวดสื่อ "เยาวชนรุ่นใหม่ใส่ใจสิทธิชุมชน"</p>
+                <p class="qr-subtitle">Young & Smart Citizen — โปรดสแกนเข้าร่วมกลุ่มเพื่อรับข่าวสารการประกวด</p>
+   <div class="qr-placeholder">
+       <img src="/qr.jpg" alt="QR Code ไลน์กลุ่ม">
+   </div>
+                <p class="qr-note">✓ สแกนเพื่อรับข่าวสารและอัพเดตกิจกรรม</p>
+                <div class="qr-line-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .349-.281.63-.63.63h-2.386c-.348 0-.63-.281-.63-.63V9.862c0-.348.282-.63.63-.63h2.386zm-3.855 0c.348 0 .63.285.63.631v3.024c0 .349-.282.63-.63.63-.349 0-.63-.281-.63-.63V10.495c0-.348.281-.631.63-.631zm-2.458 0c.348 0 .63.285.63.631v3.024c0 .349-.282.63-.63.63-.099 0-.194-.025-.28-.067l-2.2-1.474v1.511c0 .349-.281.63-.63.63-.348 0-.63-.281-.63-.63V10.495c0-.348.282-.631.63-.631.097 0 .19.024.274.065l2.206 1.476V10.495c0-.348.282-.631.63-.631zM7.8 9.863c.349 0 .63.285.63.631v3.024c0 .349-.281.63-.63.63H5.414c-.348 0-.63-.281-.63-.63V10.495c0-.348.282-.631.63-.631H7.8zM12 2C6.486 2 2 5.816 2 10.449c0 2.797 1.575 5.281 4.032 6.837l-.621 2.292c-.062.227.029.467.232.604.121.08.263.12.404.12.104 0 .208-.025.3-.078L9.13 18.62c.93.178 1.89.271 2.87.271 5.514 0 10-3.816 10-8.441S17.514 2 12 2z"/></svg>
+                    LINE กลุ่มประกวดสื่อ
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-section">
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-icon">📤</span>
+                ส่งใบสมัคร
+            </button>
+        </div>
+    </form>
+
+    <!-- LOADING -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-box">
+            <div class="spinner"></div>
+            <div class="loading-text">กำลังส่งใบสมัคร...</div>
+            <div class="loading-subtext">กรุณารอสักครู่</div>
+        </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-box">
+            <div class="success-icon">🎉</div>
+            <div class="success-title">ส่งใบสมัครเรียบร้อย!</div>
+            <div class="success-text">ขอบคุณที่สมัครเข้าร่วมกิจกรรมประกวดสื่อ<br>"เยาวชนรุ่นใหม่ใส่ใจสิทธิชุมชน"<br>อย่าลืมสแกน QR Code เข้าร่วมกลุ่มไลน์นะคะ</div>
+            <button class="success-btn" onclick="closeSuccess()">ตกลง</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        © 2568 สถาบันพระปกเกล้า — King Prajadhipok's Institute
+    </footer>
+
+    <script>
+        // ============================================================
+        // CONFIG — เปลี่ยน URL เป็น Google Apps Script Web App URL จริง
+        // ============================================================
+        const CONFIG = {
+            GAS_URL: 'https://script.google.com/macros/s/AKfycbz3UPUdfAa7oclHkBl0L7T6sK8zYrAN9kC1D89CLef_6jTZ3e2ZQP93CwqZ19rhYuph/exec',
+            MAX_FILE_SIZE: 10 * 1024 * 1024, // 10MB
+            MAX_FILES: 3,
+            ALLOWED_TYPES: ['image/jpeg', 'image/png', 'application/pdf']
+        };
+
+        // ============================================================
+        // FILE UPLOAD
+        // ============================================================
+        let uploadedFiles = [];
+
+        const fileDropArea = document.getElementById('fileDropArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+
+        fileDropArea.addEventListener('click', () => fileInput.click());
+
+        fileDropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileDropArea.classList.add('dragover');
+        });
+
+        fileDropArea.addEventListener('dragleave', () => {
+            fileDropArea.classList.remove('dragover');
+        });
+
+        fileDropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileDropArea.classList.remove('dragover');
+            handleFiles(e.dataTransfer.files);
+        });
+
+        fileInput.addEventListener('change', () => {
+            handleFiles(fileInput.files);
+            fileInput.value = '';
+        });
+
+        function handleFiles(files) {
+            for (const file of files) {
+                if (uploadedFiles.length >= CONFIG.MAX_FILES) {
+                    alert(`แนบไฟล์ได้สูงสุด ${CONFIG.MAX_FILES} ไฟล์`);
+                    break;
+                }
+                if (!CONFIG.ALLOWED_TYPES.includes(file.type)) {
+                    alert(`ไฟล์ "${file.name}" ไม่รองรับ\nรองรับเฉพาะ .jpg, .png, .pdf`);
+                    continue;
+                }
+                if (file.size > CONFIG.MAX_FILE_SIZE) {
+                    alert(`ไฟล์ "${file.name}" ขนาดเกิน 10MB`);
+                    continue;
+                }
+                uploadedFiles.push(file);
+            }
+            renderFileList();
+        }
+
+        function renderFileList() {
+            fileList.innerHTML = '';
+            uploadedFiles.forEach((file, i) => {
+                const ext = file.name.split('.').pop().toLowerCase();
+                const icon = ext === 'pdf' ? '📄' : '🖼️';
+                const size = (file.size / (1024 * 1024)).toFixed(2);
+                const div = document.createElement('div');
+                div.className = 'file-item';
+                div.innerHTML = `
+                    <div class="file-item-info">
+                        <span class="file-item-icon">${icon}</span>
+                        <span class="file-item-name">${file.name}</span>
+                    </div>
+                    <span class="file-item-size">${size} MB</span>
+                    <button type="button" class="file-item-remove" onclick="removeFile(${i})">✕</button>
+                `;
+                fileList.appendChild(div);
+            });
+        }
+
+        function removeFile(index) {
+            uploadedFiles.splice(index, 1);
+            renderFileList();
+        }
+
+        // ============================================================
+        // FILE TO BASE64
+        // ============================================================
+        function fileToBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result.split(',')[1]);
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // ============================================================
+        // VALIDATION
+        // ============================================================
+        function validateForm() {
+            let valid = true;
+            
+            // Reset errors
+            document.querySelectorAll('.error-text').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.form-input.error, .form-select.error').forEach(el => el.classList.remove('error'));
+
+            // Team Name
+            if (!document.getElementById('teamName').value.trim()) {
+                showError('teamName', 'teamNameError');
+                valid = false;
+            }
+
+            // Work Title
+            if (!document.getElementById('workTitle').value.trim()) {
+                showError('workTitle', 'workTitleError');
+                valid = false;
+            }
+
+            // Institution
+            if (!document.getElementById('institution').value.trim()) {
+                showError('institution', 'institutionError');
+                valid = false;
+            }
+
+            // Media Type
+            if (!document.querySelector('input[name="mediaType"]:checked')) {
+                document.getElementById('mediaTypeError').style.display = 'block';
+                valid = false;
+            }
+
+            // Required text fields
+            const requiredFields = [
+                'advisorName', 'advisorPosition', 'advisorAddress', 'advisorPhone',
+                'student1Name', 'student1Position', 'student1Address', 'student1Phone',
+                'student2Name', 'student2Position', 'student2Address', 'student2Phone',
+                'student3Name', 'student3Position', 'student3Address', 'student3Phone'
+            ];
+
+            requiredFields.forEach(name => {
+                const el = document.querySelector(`[name="${name}"]`);
+                if (el && !el.value.trim()) {
+                    el.classList.add('error');
+                    valid = false;
+                }
+            });
+
+            // Files
+            if (uploadedFiles.length === 0) {
+                document.getElementById('fileError').style.display = 'block';
+                valid = false;
+            }
+
+            // Consent
+            if (!document.getElementById('consentCheck').checked) {
+                document.getElementById('consentError').style.display = 'block';
+                valid = false;
+            }
+
+            return valid;
+        }
+
+        function showError(inputId, errorId) {
+            document.getElementById(inputId).classList.add('error');
+            document.getElementById(errorId).style.display = 'block';
+        }
+
+        // ============================================================
+        // FORM SUBMIT
+        // ============================================================
+        document.getElementById('applicationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (!validateForm()) {
+                // Scroll to first error
+                const firstError = document.querySelector('.error, .error-text[style*="block"]');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            document.getElementById('loadingOverlay').classList.add('active');
+
+            try {
+                // Prepare file data
+                const filesData = [];
+                for (const file of uploadedFiles) {
+                    const base64 = await fileToBase64(file);
+                    filesData.push({
+                        name: file.name,
+                        type: file.type,
+                        data: base64
+                    });
+                }
+
+                // Build payload
+                const payload = {
+                    teamName: document.getElementById('teamName').value.trim(),
+                    workTitle: document.getElementById('workTitle').value.trim(),
+                    institution: document.getElementById('institution').value.trim(),
+                    mediaType: document.querySelector('input[name="mediaType"]:checked').value,
+
+                    advisorName: document.querySelector('[name="advisorName"]').value.trim(),
+                    advisorPosition: document.querySelector('[name="advisorPosition"]').value.trim(),
+                    advisorAddress: document.querySelector('[name="advisorAddress"]').value.trim(),
+                    advisorPhone: document.querySelector('[name="advisorPhone"]').value.trim(),
+
+                    student1Name: document.querySelector('[name="student1Name"]').value.trim(),
+                    student1Position: document.querySelector('[name="student1Position"]').value.trim(),
+                    student1Address: document.querySelector('[name="student1Address"]').value.trim(),
+                    student1Phone: document.querySelector('[name="student1Phone"]').value.trim(),
+
+                    student2Name: document.querySelector('[name="student2Name"]').value.trim(),
+                    student2Position: document.querySelector('[name="student2Position"]').value.trim(),
+                    student2Address: document.querySelector('[name="student2Address"]').value.trim(),
+                    student2Phone: document.querySelector('[name="student2Phone"]').value.trim(),
+
+                    student3Name: document.querySelector('[name="student3Name"]').value.trim(),
+                    student3Position: document.querySelector('[name="student3Position"]').value.trim(),
+                    student3Address: document.querySelector('[name="student3Address"]').value.trim(),
+                    student3Phone: document.querySelector('[name="student3Phone"]').value.trim(),
+
+                    files: filesData
+                };
+
+                const response = await fetch(CONFIG.GAS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
+                });
+
+                // no-cors ไม่สามารถอ่าน response ได้ ถือว่าสำเร็จ
+                document.getElementById('loadingOverlay').classList.remove('active');
+                document.getElementById('successOverlay').classList.add('active');
+
+            } catch (err) {
+                document.getElementById('loadingOverlay').classList.remove('active');
+                alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง\n' + err.message);
+                submitBtn.disabled = false;
+            }
+        });
+
+        function closeSuccess() {
+            document.getElementById('successOverlay').classList.remove('active');
+            document.getElementById('applicationForm').reset();
+            uploadedFiles = [];
+            renderFileList();
+            document.getElementById('submitBtn').disabled = false;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Clear error on input
+        document.querySelectorAll('.form-input, .form-textarea').forEach(el => {
+            el.addEventListener('input', function() {
+                this.classList.remove('error');
+            });
+        });
+    </script>
+</body>
+</html>
