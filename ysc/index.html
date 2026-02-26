@@ -39,7 +39,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* === HEADER === */
         .page-header {
             background: var(--navy);
             padding: 40px 20px 36px;
@@ -58,25 +57,20 @@
 
         .header-project { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
         .header-project-name { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
-
         .header-line { width: 40px; height: 2px; background: rgba(255,255,255,0.15); margin: 0 auto 20px; }
-
         .header-activity { font-size: 24px; font-weight: 700; color: var(--white); line-height: 1.4; margin-bottom: 4px; }
         .header-activity-sub { font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
         .header-en { font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.45); margin-bottom: 16px; }
         .header-org { font-size: 13px; color: rgba(255,255,255,0.35); }
         .header-org strong { color: rgba(255,255,255,0.6); font-weight: 600; }
 
-        /* === FORM === */
         .form-container { max-width: 640px; margin: 0 auto; padding: 0 16px 48px; }
 
-        /* === SECTION === */
         .section { background: var(--white); border-radius: 8px; margin-top: 16px; border: 1px solid var(--gray-200); }
         .section-header { padding: 16px 20px; border-bottom: 1px solid var(--gray-100); }
         .section-title { font-size: 15px; font-weight: 700; color: var(--gray-800); }
         .section-body { padding: 20px; }
 
-        /* === FORM FIELDS === */
         .form-group { margin-bottom: 18px; }
         .form-group:last-child { margin-bottom: 0; }
         .form-label { display: block; font-size: 14px; font-weight: 600; color: var(--gray-700); margin-bottom: 6px; }
@@ -104,7 +98,6 @@
         .form-textarea { resize: vertical; min-height: 72px; }
         .error-text { color: var(--red); font-size: 12px; margin-top: 4px; display: none; }
 
-        /* === RADIO === */
         .radio-group { display: flex; flex-direction: column; gap: 10px; }
         .radio-card { position: relative; cursor: pointer; }
         .radio-card input { position: absolute; opacity: 0; width: 0; height: 0; }
@@ -125,17 +118,14 @@
         }
 
         .radio-card input:checked + .radio-card-inner .radio-dot { border-color: var(--blue); }
-
         .radio-dot::after {
             content: ''; position: absolute; top: 3px; left: 3px;
             width: 8px; height: 8px; border-radius: 50%; background: var(--blue);
             transform: scale(0); transition: transform 0.15s;
         }
-
         .radio-card input:checked + .radio-card-inner .radio-dot::after { transform: scale(1); }
         .radio-label { font-size: 14px; font-weight: 500; color: var(--gray-700); }
 
-        /* === MEMBER === */
         .member-block { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 6px; padding: 18px; margin-bottom: 14px; }
         .member-block:last-child { margin-bottom: 0; }
 
@@ -159,13 +149,11 @@
             padding: 28px 16px; text-align: center; cursor: pointer;
             transition: all 0.15s; background: var(--gray-50);
         }
-
         .file-upload-area:hover, .file-upload-area.dragover { border-color: var(--blue); background: #F0F6FC; }
 
         .upload-icon { width: 36px; height: 36px; margin: 0 auto 10px; opacity: 0.3; color: var(--gray-500); }
         .file-upload-text { font-size: 14px; font-weight: 500; color: var(--gray-600); margin-bottom: 4px; }
         .file-upload-hint { font-size: 12px; color: var(--gray-400); margin-bottom: 12px; }
-
         .file-upload-btn {
             display: inline-block; padding: 8px 22px; background: var(--navy); color: var(--white);
             border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.15s;
@@ -173,24 +161,19 @@
         .file-upload-btn:hover { background: var(--blue); }
 
         .file-list { margin-top: 10px; }
-
         .file-item {
             display: flex; align-items: center; justify-content: space-between;
             background: var(--white); border: 1px solid var(--gray-200); border-radius: 6px;
             padding: 10px 12px; margin-top: 6px; font-size: 13px; gap: 8px;
         }
-
         .file-item-info { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; }
-
         .file-item-ext {
             display: inline-block; padding: 2px 6px; background: var(--gray-100);
             border-radius: 3px; font-size: 10px; font-weight: 700; color: var(--gray-500);
             text-transform: uppercase; flex-shrink: 0;
         }
-
         .file-item-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--gray-700); font-weight: 500; }
         .file-item-size { color: var(--gray-400); font-size: 12px; flex-shrink: 0; }
-
         .file-item-remove {
             background: none; border: none; color: var(--gray-400); cursor: pointer;
             font-size: 16px; padding: 2px 6px; border-radius: 4px;
@@ -198,27 +181,35 @@
         }
         .file-item-remove:hover { background: rgba(220,38,38,0.08); color: var(--red); }
 
-        /* === CONSENT === */
+        /* === UPLOAD PROGRESS === */
+        .upload-progress-wrap { margin-top: 12px; display: none; }
+        .upload-progress-label { font-size: 12px; color: var(--gray-500); margin-bottom: 6px; display: flex; justify-content: space-between; }
+        .upload-progress-bar-bg { background: var(--gray-200); border-radius: 99px; height: 6px; overflow: hidden; }
+        .upload-progress-bar { height: 100%; background: var(--blue); border-radius: 99px; width: 0%; transition: width 0.2s; }
+
+        /* === CHUNKED UPLOAD INFO === */
+        .chunk-info {
+            background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 6px;
+            padding: 10px 14px; margin-top: 10px; font-size: 12px; color: #1E40AF;
+            display: none;
+        }
+
         .consent-box { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 6px; padding: 18px; }
         .consent-text { font-size: 13px; color: var(--gray-600); line-height: 1.8; margin-bottom: 14px; }
         .consent-check { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
         .consent-check input[type="checkbox"] { width: 18px; height: 18px; margin-top: 1px; accent-color: var(--blue); cursor: pointer; flex-shrink: 0; }
         .consent-check span { font-size: 14px; font-weight: 600; color: var(--gray-800); }
 
-        /* === QR CODE === */
         .qr-section { text-align: center; padding: 28px 20px; }
         .qr-title { font-size: 15px; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
         .qr-subtitle { font-size: 13px; color: var(--gray-500); margin-bottom: 20px; max-width: 360px; margin-left: auto; margin-right: auto; }
-
         .qr-placeholder {
             width: 160px; height: 160px; background: var(--gray-50); border: 1.5px dashed var(--gray-300);
             border-radius: 6px; display: flex; align-items: center; justify-content: center;
             margin: 0 auto 14px; font-size: 13px; color: var(--gray-400); flex-direction: column; gap: 6px;
         }
         .qr-placeholder img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
-
         .qr-note { font-size: 12px; color: var(--gray-500); margin-bottom: 12px; }
-
         .qr-line-btn {
             display: inline-flex; align-items: center; gap: 8px;
             background: var(--line-green); color: var(--white); padding: 9px 22px;
@@ -227,9 +218,7 @@
         }
         .qr-line-btn:hover { opacity: 0.9; }
 
-        /* === SUBMIT === */
         .submit-section { margin-top: 20px; }
-
         .submit-btn {
             display: block; width: 100%; padding: 14px;
             background: var(--navy); color: var(--white);
@@ -241,38 +230,36 @@
         .submit-btn:active { background: #1e4a6e; }
         .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-        /* === OVERLAYS === */
         .overlay {
             display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,0,0.4); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
             z-index: 1000; align-items: center; justify-content: center; padding: 20px;
         }
         .overlay.active { display: flex; }
-
         .overlay-box {
             background: var(--white); border-radius: 8px; padding: 36px 28px;
             text-align: center; max-width: 380px; width: 100%;
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
-
         .spinner {
             width: 36px; height: 36px; border: 3px solid var(--gray-200); border-top-color: var(--navy);
             border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 16px;
         }
         @keyframes spin { to { transform: rotate(360deg); } }
-
         .overlay-title { font-size: 16px; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
         .overlay-sub { font-size: 13px; color: var(--gray-400); }
+        .overlay-progress { margin-top: 14px; }
+        .overlay-progress-bar-bg { background: var(--gray-200); border-radius: 99px; height: 6px; overflow: hidden; }
+        .overlay-progress-bar { height: 100%; background: var(--navy); border-radius: 99px; width: 0%; transition: width 0.3s; }
+        .overlay-progress-text { font-size: 12px; color: var(--gray-400); margin-top: 6px; }
 
         .success-check {
             width: 48px; height: 48px; border-radius: 50%; background: var(--green);
             display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
         }
         .success-check svg { width: 24px; height: 24px; }
-
         .success-title { font-size: 18px; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
         .success-text { font-size: 14px; color: var(--gray-500); line-height: 1.7; margin-bottom: 20px; }
-
         .success-btn {
             display: inline-block; padding: 10px 32px; background: var(--navy); color: var(--white);
             border: none; border-radius: 6px; font-family: inherit; font-size: 14px; font-weight: 600;
@@ -280,10 +267,8 @@
         }
         .success-btn:hover { background: var(--blue); }
 
-        /* === FOOTER === */
         .page-footer { text-align: center; padding: 24px 16px; color: var(--gray-400); font-size: 12px; }
 
-        /* === RESPONSIVE === */
         @media (max-width: 640px) {
             .page-header { padding: 32px 16px 28px; }
             .header-activity { font-size: 20px; }
@@ -307,7 +292,6 @@
             .member-block { padding: 12px; }
         }
 
-        /* iOS input zoom prevention */
         @supports (-webkit-touch-callout: none) {
             .form-input, .form-textarea { font-size: 16px; }
         }
@@ -315,7 +299,6 @@
 </head>
 <body>
 
-    <!-- HEADER -->
     <header class="page-header">
         <div class="header-label">ใบสมัครออนไลน์</div>
         <p class="header-project">โครงการกฎหมายภาคประชาชน</p>
@@ -329,11 +312,8 @@
 
     <form id="applicationForm" class="form-container" novalidate>
 
-        <!-- 1: TEAM INFO -->
         <div class="section">
-            <div class="section-header">
-                <div class="section-title">ข้อมูลทีมและผลงาน</div>
-            </div>
+            <div class="section-header"><div class="section-title">ข้อมูลทีมและผลงาน</div></div>
             <div class="section-body">
                 <div class="form-group">
                     <label class="form-label">ชื่อทีม <span class="req">*</span></label>
@@ -353,11 +333,8 @@
             </div>
         </div>
 
-        <!-- 2: MEDIA TYPE -->
         <div class="section">
-            <div class="section-header">
-                <div class="section-title">สื่อที่สนใจเข้าร่วมประกวด</div>
-            </div>
+            <div class="section-header"><div class="section-title">สื่อที่สนใจเข้าร่วมประกวด</div></div>
             <div class="section-body">
                 <div class="form-group">
                     <label class="form-label">เลือกประเภทสื่อ <span class="req">*</span></label>
@@ -382,11 +359,8 @@
             </div>
         </div>
 
-        <!-- 3: ADVISOR -->
         <div class="section">
-            <div class="section-header">
-                <div class="section-title">อาจารย์ผู้ควบคุมทีม</div>
-            </div>
+            <div class="section-header"><div class="section-title">อาจารย์ผู้ควบคุมทีม</div></div>
             <div class="section-body">
                 <div class="member-block">
                     <div class="field-row">
@@ -411,11 +385,8 @@
             </div>
         </div>
 
-        <!-- 4: STUDENTS -->
         <div class="section">
-            <div class="section-header">
-                <div class="section-title">สมาชิกในทีม (นิสิต/นักศึกษา)</div>
-            </div>
+            <div class="section-header"><div class="section-title">สมาชิกในทีม (นิสิต/นักศึกษา)</div></div>
             <div class="section-body">
                 <div class="member-block">
                     <div class="member-title"><span class="member-num">1</span> นิสิต/นักศึกษา คนที่ 1</div>
@@ -438,7 +409,6 @@
                         <input type="tel" class="form-input" name="student1Phone" placeholder="0XX-XXX-XXXX" required>
                     </div>
                 </div>
-
                 <div class="member-block">
                     <div class="member-title"><span class="member-num">2</span> นิสิต/นักศึกษา คนที่ 2</div>
                     <div class="field-row">
@@ -460,7 +430,6 @@
                         <input type="tel" class="form-input" name="student2Phone" placeholder="0XX-XXX-XXXX" required>
                     </div>
                 </div>
-
                 <div class="member-block">
                     <div class="member-title"><span class="member-num">3</span> นิสิต/นักศึกษา คนที่ 3</div>
                     <div class="field-row">
@@ -485,35 +454,36 @@
             </div>
         </div>
 
-        <!-- 5: FILE UPLOAD -->
+        <!-- FILE UPLOAD -->
         <div class="section">
-            <div class="section-header">
-                <div class="section-title">แนบไฟล์ผลงาน</div>
-            </div>
+            <div class="section-header"><div class="section-title">แนบไฟล์ผลงาน</div></div>
             <div class="section-body">
                 <div class="form-group">
                     <label class="form-label">
                         อัปโหลดไฟล์ผลงาน <span class="req">*</span>
-                        <span class="label-hint">รองรับ .jpg, .jpeg, .png, .pdf — ขนาดไม่เกิน 10MB ต่อไฟล์ — แนบได้สูงสุด 3 ไฟล์</span>
+                        <!-- ✏️ แก้ hint text: เพิ่มเป็น 50MB, รองรับสูงสุด 5 ไฟล์ -->
+                        <span class="label-hint">รองรับ .jpg, .jpeg, .png, .pdf — ขนาดไม่เกิน 50MB</span>
                     </label>
                     <div class="file-upload-area" id="fileDropArea">
                         <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        <!-- ✏️ แก้ hint text ใน drop zone -->
                         <div class="file-upload-text">ลากไฟล์มาวางที่นี่ หรือกดเลือกไฟล์</div>
-                        <div class="file-upload-hint">JPG, PNG, PDF ขนาดไม่เกิน 10MB</div>
+                        <div class="file-upload-hint">JPG, PNG, PDF ขนาดไม่เกิน 50MB</div>
                         <div class="file-upload-btn">เลือกไฟล์</div>
                         <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf" multiple hidden>
                     </div>
                     <div class="file-list" id="fileList"></div>
+                    <!-- แถบ progress สำหรับ chunked upload -->
+                    <div class="chunk-info" id="chunkInfo">
+                        ⚡ ไฟล์ขนาดใหญ่จะถูกส่งเป็น chunks อัตโนมัติ — กรุณาอย่าปิดหน้าต่างระหว่างอัปโหลด
+                    </div>
                     <div class="error-text" id="fileError">กรุณาแนบไฟล์ผลงานอย่างน้อย 1 ไฟล์</div>
                 </div>
             </div>
         </div>
 
-        <!-- 6: CONSENT -->
         <div class="section">
-            <div class="section-header">
-                <div class="section-title">ข้อกำหนดและเงื่อนไข</div>
-            </div>
+            <div class="section-header"><div class="section-title">ข้อกำหนดและเงื่อนไข</div></div>
             <div class="section-body">
                 <div class="consent-box">
                     <p class="consent-text">
@@ -530,34 +500,38 @@
             </div>
         </div>
 
-        <!-- 7: QR CODE -->
         <div class="section">
             <div class="qr-section">
                 <p class="qr-title">เข้าร่วมกลุ่มไลน์ประกวด</p>
                 <p class="qr-subtitle">กิจกรรมประกวดสื่อ "เยาวชนรุ่นใหม่ใส่ใจสิทธิชุมชน" (Young &amp; Smart Citizen) — โปรดสแกนเข้าร่วมกลุ่มเพื่อรับข่าวสารการประกวด</p>
-   <div class="qr-placeholder">
-       <img src="/qr.jpg" alt="QR Code ไลน์กลุ่ม">
-   </div>
+                <div class="qr-placeholder">
+                    <img src="/qr.jpg" alt="QR Code ไลน์กลุ่ม">
+                </div>
                 <p class="qr-note">สแกนเพื่อรับข่าวสารและอัพเดตกิจกรรม</p>
                 <a href="#" class="qr-line-btn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .349-.281.63-.63.63h-2.386c-.348 0-.63-.281-.63-.63V9.862c0-.348.282-.63.63-.63h2.386zm-3.855 0c.348 0 .63.285.63.631v3.024c0 .349-.282.63-.63.63-.349 0-.63-.281-.63-.63V10.495c0-.348.281-.631.63-.631zm-2.458 0c.348 0 .63.285.63.631v3.024c0 .349-.282.63-.63.63-.099 0-.194-.025-.28-.067l-2.2-1.474v1.511c0 .349-.281.63-.63.63-.348 0-.63-.281-.63-.63V10.495c0-.348.282-.631.63-.631.097 0 .19.024.274.065l2.206 1.476V10.495c0-.348.282-.631.63-.631zM7.8 9.863c.349 0 .63.285.63.631v3.024c0 .349-.281.63-.63.63H5.414c-.348 0-.63-.281-.63-.63V10.495c0-.348.282-.631.63-.631H7.8zM12 2C6.486 2 2 5.816 2 10.449c0 2.797 1.575 5.281 4.032 6.837l-.621 2.292c-.062.227.029.467.232.604.121.08.263.12.404.12.104 0 .208-.025.3-.078L9.13 18.62c.93.178 1.89.271 2.87.271 5.514 0 10-3.816 10-8.441S17.514 2 12 2z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .349-.281.63-.63.63h-2.386c-.348 0-.63-.281-.63-.63V9.862c0-.348.282-.63.63-.63h2.386zm-3.855 0c.348 0 .63.285.63.631v3.024c0 .349-.282.63-.63.63-.349 0-.63-.281-.63-.63V10.495c0-.348.281-.631.63-.631zm-2.458 0c.348 0 .63.285.63.631v3.024c0 .349-.282.63-.63.63-.099 0-.194-.025-.28-.067l-2.2-1.474v1.511c0 .349-.281.63-.63.63-.348 0-.63-.281-.63-.63V10.495c0-.348.282-.631.63-.631.097 0 .19.024.274.065l2.206 1.476V10.495c0-.348.282-.631.63-.631zM7.8 9.863c.349 0 .63.285.63.631v3.024c0 .349-.281.63-.63.63H5.414c-.348 0-.63-.281-.63-.63V10.495c0-.348.282-.631.63-.631H7.8zM12 2C6.486 2 2 5.816 2 10.449c0 2.797 1.575 5.281 4.032 6.837l-.621 2.292c-.062.227.029.467.232.604.121.08.263.12.404.12.104 0 .208-.025.3-.078L9.13 18.62c.93.178 1.89.271 2.87.271 5.514 0 10-3.816 10-8.441S17.514 2 12 2z"/></svg>
                     LINE กลุ่มประกวดสื่อ
                 </a>
             </div>
         </div>
 
-        <!-- SUBMIT -->
         <div class="submit-section">
             <button type="submit" class="submit-btn" id="submitBtn">ส่งใบสมัคร</button>
         </div>
     </form>
 
-    <!-- LOADING -->
+    <!-- LOADING with progress -->
     <div class="overlay" id="loadingOverlay">
         <div class="overlay-box">
             <div class="spinner"></div>
-            <div class="overlay-title">กำลังส่งใบสมัคร...</div>
-            <div class="overlay-sub">กรุณารอสักครู่</div>
+            <div class="overlay-title" id="loadingTitle">กำลังส่งใบสมัคร...</div>
+            <div class="overlay-sub" id="loadingSubtitle">กรุณารอสักครู่</div>
+            <div class="overlay-progress" id="overlayProgress">
+                <div class="overlay-progress-bar-bg">
+                    <div class="overlay-progress-bar" id="overlayProgressBar"></div>
+                </div>
+                <div class="overlay-progress-text" id="overlayProgressText"></div>
+            </div>
         </div>
     </div>
 
@@ -573,15 +547,18 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="page-footer">&copy; 2569 สถาบันพระปกเกล้า &mdash; King Prajadhipok's Institute</footer>
 
     <script>
         var CONFIG = {
             GAS_URL: 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL',
-            MAX_FILE_SIZE: 10 * 1024 * 1024,
-            MAX_FILES: 3,
-            ALLOWED_TYPES: ['image/jpeg', 'image/png', 'application/pdf']
+            // ✏️ เพิ่ม limit เป็น 50MB ต่อไฟล์
+            MAX_FILE_SIZE: 50 * 1024 * 1024,
+            // ✏️ เพิ่มจำนวนไฟล์สูงสุดเป็น 5 ไฟล์
+            MAX_FILES: 5,
+            ALLOWED_TYPES: ['image/jpeg', 'image/png', 'application/pdf'],
+            // ✏️ ขนาด chunk สำหรับแบ่งส่งไฟล์ใหญ่ — 4MB ต่อ chunk (GAS limit ~50MB payload)
+            CHUNK_SIZE: 4 * 1024 * 1024
         };
 
         var uploadedFiles = [];
@@ -598,27 +575,46 @@
         function handleFiles(files) {
             for (var j = 0; j < files.length; j++) {
                 var file = files[j];
-                if (uploadedFiles.length >= CONFIG.MAX_FILES) { alert('แนบไฟล์ได้สูงสุด ' + CONFIG.MAX_FILES + ' ไฟล์'); break; }
-                if (!CONFIG.ALLOWED_TYPES.includes(file.type)) { alert('ไฟล์ "' + file.name + '" ไม่รองรับ\nรองรับเฉพาะ .jpg, .png, .pdf'); continue; }
-                if (file.size > CONFIG.MAX_FILE_SIZE) { alert('ไฟล์ "' + file.name + '" ขนาดเกิน 10MB'); continue; }
+                if (uploadedFiles.length >= CONFIG.MAX_FILES) {
+                    alert('แนบไฟล์ได้สูงสุด ' + CONFIG.MAX_FILES + ' ไฟล์');
+                    break;
+                }
+                if (!CONFIG.ALLOWED_TYPES.includes(file.type)) {
+                    alert('ไฟล์ "' + file.name + '" ไม่รองรับ\nรองรับเฉพาะ .jpg, .png, .pdf');
+                    continue;
+                }
+                if (file.size > CONFIG.MAX_FILE_SIZE) {
+                    alert('ไฟล์ "' + file.name + '" ขนาดเกิน 50MB');
+                    continue;
+                }
                 uploadedFiles.push(file);
             }
             renderFileList();
+            // แสดง chunk info ถ้ามีไฟล์ใหญ่กว่า chunk size
+            var hasLargeFile = uploadedFiles.some(function(f) { return f.size > CONFIG.CHUNK_SIZE; });
+            document.getElementById('chunkInfo').style.display = hasLargeFile ? 'block' : 'none';
         }
 
         function renderFileList() {
             fileList.innerHTML = '';
             uploadedFiles.forEach(function(file, i) {
                 var ext = file.name.split('.').pop().toUpperCase();
-                var size = (file.size / (1024 * 1024)).toFixed(2);
+                var size = file.size >= 1024 * 1024
+                    ? (file.size / (1024 * 1024)).toFixed(1) + ' MB'
+                    : (file.size / 1024).toFixed(0) + ' KB';
                 var div = document.createElement('div');
                 div.className = 'file-item';
-                div.innerHTML = '<div class="file-item-info"><span class="file-item-ext">' + ext + '</span><span class="file-item-name">' + file.name + '</span></div><span class="file-item-size">' + size + ' MB</span><button type="button" class="file-item-remove" onclick="removeFile(' + i + ')">&times;</button>';
+                div.innerHTML = '<div class="file-item-info"><span class="file-item-ext">' + ext + '</span><span class="file-item-name">' + file.name + '</span></div><span class="file-item-size">' + size + '</span><button type="button" class="file-item-remove" onclick="removeFile(' + i + ')">&times;</button>';
                 fileList.appendChild(div);
             });
         }
 
-        function removeFile(index) { uploadedFiles.splice(index, 1); renderFileList(); }
+        function removeFile(index) {
+            uploadedFiles.splice(index, 1);
+            renderFileList();
+            var hasLargeFile = uploadedFiles.some(function(f) { return f.size > CONFIG.CHUNK_SIZE; });
+            document.getElementById('chunkInfo').style.display = hasLargeFile ? 'block' : 'none';
+        }
 
         function fileToBase64(file) {
             return new Promise(function(resolve, reject) {
@@ -629,6 +625,84 @@
             });
         }
 
+        // ✏️ ฟังก์ชันใหม่: ส่งไฟล์ขนาดใหญ่แบบ chunked upload
+        async function uploadFileInChunks(file, fileIndex, totalFiles, formMeta) {
+            var base64Full = await fileToBase64(file);
+            var totalChunks = Math.ceil(base64Full.length / (CONFIG.CHUNK_SIZE * 1.37)); // 1.37 = base64 overhead
+            // คำนวณ chunk size ใน base64 characters
+            var chunkSizeB64 = Math.ceil(base64Full.length / totalChunks);
+            var uploadId = Date.now() + '_' + fileIndex;
+
+            for (var c = 0; c < totalChunks; c++) {
+                var chunkData = base64Full.substring(c * chunkSizeB64, (c + 1) * chunkSizeB64);
+                var isLast = (c === totalChunks - 1);
+
+                // อัปเดต progress
+                var overallPercent = Math.round(
+                    ((fileIndex / totalFiles) + ((c + 1) / totalChunks / totalFiles)) * 100
+                );
+                updateProgress(
+                    'กำลังอัปโหลดไฟล์ ' + (fileIndex + 1) + '/' + totalFiles,
+                    'ส่งข้อมูล ' + (c + 1) + '/' + totalChunks + ' chunks...',
+                    overallPercent
+                );
+
+                var payload = {
+                    action: 'uploadChunk',
+                    uploadId: uploadId,
+                    fileName: file.name,
+                    fileType: file.type,
+                    chunkIndex: c,
+                    totalChunks: totalChunks,
+                    isLastChunk: isLast,
+                    chunkData: chunkData,
+                    // ส่ง formMeta เฉพาะ chunk แรก เพื่อประหยัด payload
+                    formMeta: (c === 0) ? formMeta : null
+                };
+
+                await fetch(CONFIG.GAS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
+                });
+
+                // หน่วงเล็กน้อยป้องกัน GAS rate limit
+                if (!isLast) await new Promise(function(r) { setTimeout(r, 300); });
+            }
+
+            return uploadId;
+        }
+
+        // ✏️ ฟังก์ชันส่งไฟล์เล็ก (เหมือนเดิม แต่ระบุ action)
+        async function uploadFileDirect(file, fileIndex, totalFiles, formMeta) {
+            var base64 = await fileToBase64(file);
+            updateProgress(
+                'กำลังอัปโหลดไฟล์ ' + (fileIndex + 1) + '/' + totalFiles,
+                'กำลังเตรียมไฟล์...',
+                Math.round((fileIndex / totalFiles) * 100)
+            );
+            var payload = {
+                action: 'submitDirect',
+                files: [{ name: file.name, type: file.type, data: base64 }],
+                formMeta: formMeta
+            };
+            await fetch(CONFIG.GAS_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify(payload)
+            });
+        }
+
+        function updateProgress(title, subtitle, percent) {
+            document.getElementById('loadingTitle').textContent = title;
+            document.getElementById('loadingSubtitle').textContent = subtitle;
+            document.getElementById('overlayProgressBar').style.width = percent + '%';
+            document.getElementById('overlayProgressText').textContent = percent + '%';
+            document.getElementById('overlayProgress').style.display = 'block';
+        }
+
         function validateForm() {
             var valid = true;
             document.querySelectorAll('.error-text').forEach(function(el) { el.style.display = 'none'; });
@@ -637,7 +711,7 @@
             if (!document.getElementById('workTitle').value.trim()) { showError('workTitle', 'workTitleError'); valid = false; }
             if (!document.getElementById('institution').value.trim()) { showError('institution', 'institutionError'); valid = false; }
             if (!document.querySelector('input[name="mediaType"]:checked')) { document.getElementById('mediaTypeError').style.display = 'block'; valid = false; }
-            ['advisorName','advisorPosition','advisorAddress','advisorPhone','student1Name','student1Position','student1Address','student1Phone','student2Name','student2Position','student2Address','student2Phone','student3Name','student3Position','student3Address','student3Phone'].forEach(function(name) {
+            ['advisorName','advisorPosition','advisorAddress','advisorPhone','student1Name','student1Position','student1Address','student1Phone','student2Name','student2Position','student2Address','student2Phone'].forEach(function(name) {
                 var el = document.querySelector('[name="' + name + '"]');
                 if (el && !el.value.trim()) { el.classList.add('error'); valid = false; }
             });
@@ -658,30 +732,61 @@
                 if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
+
             var submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
             document.getElementById('loadingOverlay').classList.add('active');
+
             try {
-                var filesData = [];
-                for (var i = 0; i < uploadedFiles.length; i++) {
-                    var base64 = await fileToBase64(uploadedFiles[i]);
-                    filesData.push({ name: uploadedFiles[i].name, type: uploadedFiles[i].type, data: base64 });
-                }
                 var gv = function(n) { return document.querySelector('[name="' + n + '"]').value.trim(); };
-                var payload = {
+
+                var formMeta = {
                     teamName: document.getElementById('teamName').value.trim(),
                     workTitle: document.getElementById('workTitle').value.trim(),
                     institution: document.getElementById('institution').value.trim(),
                     mediaType: document.querySelector('input[name="mediaType"]:checked').value,
-                    advisorName: gv('advisorName'), advisorPosition: gv('advisorPosition'), advisorAddress: gv('advisorAddress'), advisorPhone: gv('advisorPhone'),
-                    student1Name: gv('student1Name'), student1Position: gv('student1Position'), student1Address: gv('student1Address'), student1Phone: gv('student1Phone'),
-                    student2Name: gv('student2Name'), student2Position: gv('student2Position'), student2Address: gv('student2Address'), student2Phone: gv('student2Phone'),
-                    student3Name: gv('student3Name'), student3Position: gv('student3Position'), student3Address: gv('student3Address'), student3Phone: gv('student3Phone'),
-                    files: filesData
+                    advisorName: gv('advisorName'), advisorPosition: gv('advisorPosition'),
+                    advisorAddress: gv('advisorAddress'), advisorPhone: gv('advisorPhone'),
+                    student1Name: gv('student1Name'), student1Position: gv('student1Position'),
+                    student1Address: gv('student1Address'), student1Phone: gv('student1Phone'),
+                    student2Name: gv('student2Name'), student2Position: gv('student2Position'),
+                    student2Address: gv('student2Address'), student2Phone: gv('student2Phone'),
+                    student3Name: gv('student3Name'), student3Position: gv('student3Position'),
+                    student3Address: gv('student3Address'), student3Phone: gv('student3Phone')
                 };
-                await fetch(CONFIG.GAS_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(payload) });
+
+                // ✏️ ส่งไฟล์ทีละไฟล์ — ไฟล์ใหญ่ใช้ chunked, ไฟล์เล็กใช้ direct
+                var DIRECT_THRESHOLD = 4 * 1024 * 1024; // ไฟล์ < 4MB ส่งตรง
+                for (var i = 0; i < uploadedFiles.length; i++) {
+                    var file = uploadedFiles[i];
+                    if (file.size > DIRECT_THRESHOLD) {
+                        await uploadFileInChunks(file, i, uploadedFiles.length, i === 0 ? formMeta : null);
+                    } else {
+                        await uploadFileDirect(file, i, uploadedFiles.length, i === 0 ? formMeta : null);
+                    }
+                }
+
+                // ✏️ ส่ง finalize เพื่อให้ GAS รวมข้อมูลและเขียน Sheet
+                updateProgress('กำลังบันทึกข้อมูล...', 'เกือบเสร็จแล้ว', 95);
+                var sessionId = Date.now().toString();
+                await fetch(CONFIG.GAS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify({
+                        action: 'finalize',
+                        sessionId: sessionId,
+                        formMeta: formMeta,
+                        fileCount: uploadedFiles.length
+                    })
+                });
+
+                updateProgress('เสร็จสิ้น!', 'บันทึกข้อมูลเรียบร้อย', 100);
+                await new Promise(function(r) { setTimeout(r, 500); });
+
                 document.getElementById('loadingOverlay').classList.remove('active');
                 document.getElementById('successOverlay').classList.add('active');
+
             } catch (err) {
                 document.getElementById('loadingOverlay').classList.remove('active');
                 alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง\n' + err.message);
@@ -694,7 +799,9 @@
             document.getElementById('applicationForm').reset();
             uploadedFiles = [];
             renderFileList();
+            document.getElementById('chunkInfo').style.display = 'none';
             document.getElementById('submitBtn').disabled = false;
+            document.getElementById('overlayProgress').style.display = 'none';
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
