@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รับฟังความคิดเห็น — ร่าง พ.ร.บ. การบริหารจัดการขยะมูลฝอยอย่างยั่งยืน</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═════════════════════════════════════
+     POPUP NOTICE
+══════════════════════════════════════ -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+
+    <div class="popup-header">
+      <div class="popup-icon"></div>
+      <h2 id="popupTitle">ก่อนเริ่มทำแบบสอบถาม</h2>
+    </div>
+
+    <div class="popup-body">
+
+      <!-- ประกาศเรื่องข้อมูล -->
+      <div class="popup-section">
+        <div class="popup-section-title">
+          <span class="popup-section-icon"></span>
+          การเก็บรวบรวมและใช้ข้อมูลส่วนบุคคล
+        </div>
+        <p>สถาบันพระปกเกล้า โดยวิทยาลัยการนิติบัญญัติ ดำเนินการเก็บรวบรวมข้อมูลในแบบสอบถามนี้ เพื่อ<strong>วัตถุประสงค์ในการศึกษาวิจัยและพัฒนาร่างกฎหมาย</strong>เท่านั้น</p>
+        <ul class="popup-list">
+          <li>ข้อมูลที่เก็บรวบรวม ได้แก่ อายุ ระดับการศึกษา อาชีพ และพื้นที่อาศัย</li>
+          <li>ข้อมูลจะถูกประมวลผลในภาพรวม <strong>ไม่มีการระบุตัวตนรายบุคคล</strong></li>
+          <li>ไม่มีการเผยแพร่ข้อมูลส่วนบุคคลต่อบุคคลภายนอก</li>
+          <li>ข้อมูลจะถูกเก็บรักษาตามระยะเวลาที่กฎหมายกำหนด</li>
+        </ul>
+        <p class="popup-note">การกรอกแบบสอบถามนี้ถือว่าท่านยินยอมให้จัดเก็บและใช้ข้อมูลตามวัตถุประสงค์ข้างต้น</p>
+      </div>
+
+      <!-- เอกสารประกอบ -->
+      <div class="popup-section">
+        <div class="popup-section-title">
+          <span class="popup-section-icon"></span>
+          เอกสารประกอบการพิจารณา
+        </div>
+        <p>ท่านสามารถเปิดอ่านร่างพระราชบัญญัติฉบับเต็มก่อนตอบแบบสอบถามได้</p>
+        <a class="pdf-link" href="draft-law.pdf" target="_blank" rel="noopener">
+          <span class="pdf-icon"></span>
+          <span class="pdf-text">
+            <strong>ร่าง พ.ร.บ. การบริหารจัดการขยะมูลฝอยอย่างยั่งยืน พ.ศ. ….</strong>
+            <small>เปิดในแท็บใหม่ — PDF</small>
+          </span>
+          <span class="pdf-arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="popup-footer">
+      <button class="popup-btn" id="popupAccept">รับทราบและเริ่มทำแบบสอบถาม</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     Header
+══════════════════════════════════════ -->
+<header class="site-header">
+  <span class="logo-dot"></span>
+  <span>สถาบันพระปกเกล้า — วิทยาลัยการนิติบัญญัติ</span>
+</header>
+
+<div class="progress-bar-wrap">
+  <div class="progress-bar-fill" id="progressBar"></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     Hero
+══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-tag">รับฟังความคิดเห็นสาธารณะ</div>
+  <h1>ร่างพระราชบัญญัติการบริหารจัดการขยะมูลฝอยอย่างยั่งยืน พ.ศ. ….</h1>
+  <p>ความคิดเห็นของท่านมีคุณค่าต่อการพัฒนากฎหมายที่ดีและยั่งยืนสำหรับสังคมไทย</p>
+</section>
+
+<!-- ══════════════════════════════════════
+     Form
+══════════════════════════════════════ -->
+<main class="main-wrap" id="formWrap">
+<form id="surveyForm" novalidate>
+
+  <!-- ════════════════════════════════
+       ส่วนที่ 1 — ข้อมูลทั่วไป
+  ════════════════════════════════ -->
+  <div class="part-header">
+    <div class="part-badge">ส่วนที่ 1</div>
+    <div class="part-header-text">
+      <div class="part-title">ข้อมูลทั่วไปของผู้ตอบแบบสอบถาม</div>
+      <div class="part-sub">ข้อมูลจะถูกใช้เพื่อการวิจัยในภาพรวมเท่านั้น ไม่มีการระบุตัวตน</div>
+    </div>
+  </div>
+
+  <!-- 1. อายุ -->
+  <div class="card info-card" id="card-age">
+    <div class="card-number">1. อายุ</div>
+    <div class="radio-group radio-group--wrap">
+      <label class="radio-label">
+        <input type="radio" name="age" value="18-25" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">18 – 25 ปี</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="age" value="26-35" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">26 – 35 ปี</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="age" value="36-45" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">36 – 45 ปี</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="age" value="46-60" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">46 – 60 ปี</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="age" value="61+" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">61 ปีขึ้นไป</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- 2. การศึกษา -->
+  <div class="card info-card" id="card-edu">
+    <div class="card-number">2. การศึกษาสูงสุด</div>
+    <div class="radio-group radio-group--wrap">
+      <label class="radio-label">
+        <input type="radio" name="education" value="primary" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">ประถมศึกษา</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="education" value="lower-sec" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">มัธยมศึกษาตอนต้น</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="education" value="upper-sec" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">มัธยมศึกษาตอนปลาย / ปวช.</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="education" value="diploma" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">อนุปริญญา / ปวส.</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="education" value="bachelor" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">ปริญญาตรี</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="education" value="higher-dip" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">ประกาศนียบัตรชั้นสูง (สูงกว่า ป.ตรี)</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="education" value="master" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">ปริญญาโท</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="education" value="phd" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">ปริญญาเอก</span>
+      </label>
+      <label class="radio-label radio-has-input">
+        <input type="radio" name="education" value="other" id="edu-other-radio" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">อื่นๆ โปรดระบุ</span>
+      </label>
+    </div>
+    <div class="inline-other-wrap" id="edu-other-wrap">
+      <input type="text" name="education_other" class="text-input" placeholder="ระบุการศึกษา…" />
+    </div>
+  </div>
+
+  <!-- 3. อาชีพ -->
+  <div class="card info-card" id="card-job">
+    <div class="card-number">3. อาชีพ</div>
+    <input type="text" name="occupation" class="text-input" placeholder="กรุณาระบุอาชีพของท่าน…" />
+  </div>
+
+  <!-- 4. พื้นที่ -->
+  <div class="card info-card" id="card-area">
+    <div class="card-number">4. ท่านอาศัยอยู่ในเขตพื้นที่ใด</div>
+    <div class="radio-group radio-group--wrap">
+      <label class="radio-label">
+        <input type="radio" name="area" value="tambon" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">อบต. / เทศบาลตำบล</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="area" value="mueang" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">เทศบาลเมือง</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="area" value="nakhon" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">เทศบาลนคร</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="area" value="bangkok" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">กรุงเทพมหานคร</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="area" value="pattaya" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">เมืองพัทยา</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       ส่วนที่ 2 — แบบสอบถาม
+  ════════════════════════════════ -->
+  <div class="part-header part-header--alt">
+    <div class="part-badge part-badge--alt">ส่วนที่ 2</div>
+    <div class="part-header-text">
+      <div class="part-title">แบบสอบถาม</div>
+      <div class="part-sub">กรุณาเลือกความคิดเห็นในแต่ละข้อ และระบุเหตุผลประกอบ (ไม่บังคับ)</div>
+    </div>
+  </div>
+
+  <div class="card" id="card-q1">
+    <div class="card-number">ข้อที่ 1</div>
+    <div class="card-question">ท่านเห็นด้วยหรือไม่กับการตรากฎหมายว่าด้วยการจัดการขยะมูลฝอยอย่างยั่งยืน</div>
+    <div class="card-sub">เพื่อปฏิรูประบบการจัดการขยะมูลฝอยที่เป็นระบบและครบวงจร ตั้งแต่การป้องกัน การควบคุม และลดปริมาณขยะ การส่งเสริมการนำของเสียกลับมาใช้ประโยชน์ รวมถึงการกำจัดขยะอย่างถูกต้องตามหลักวิชาการ</div>
+    <div class="radio-group">
+      <label class="radio-label">
+        <input type="radio" name="q1" value="agree" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">✓&ensp;เห็นด้วย</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="q1" value="disagree" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">✗&ensp;ไม่เห็นด้วย</span>
+      </label>
+    </div>
+    <div class="reason-wrap" id="reason-q1">
+      <div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div>
+      <textarea name="q1_reason" placeholder="กรุณาระบุเหตุผล…"></textarea>
+    </div>
+  </div>
+
+  <div class="card" id="card-q2">
+    <div class="card-number">ข้อที่ 2</div>
+    <div class="card-question">ท่านเห็นด้วยหรือไม่ที่กฎหมายบัญญัติรับรองหลักการว่าด้วยสิทธิมนุษยชนสิ่งแวดล้อม รวมถึงแนวคิดและหลักการบริหารจัดการขยะสมัยใหม่ ดังต่อไปนี้</div>
+    <ul class="principle-list">
+      <li><span class="num">1</span><span>หลักขยายความรับผิดชอบของผู้ผลิต (Extended Producer Responsibility — EPR)</span></li>
+      <li><span class="num">2</span><span>หลักการเศรษฐกิจหมุนเวียน (Circular Economy — CE)</span></li>
+      <li><span class="num">3</span><span>หลักการผู้ก่อมลพิษเป็นผู้จ่าย (Polluter Pays Principle — PPP)</span></li>
+      <li><span class="num">4</span><span>หลักการมีส่วนร่วมของประชาชนในการบริหารจัดการขยะมูลฝอย</span></li>
+      <li><span class="num">5</span><span>หลักความเป็นหุ้นส่วนระหว่างรัฐ – เอกชน (Public Private Partnerships)</span></li>
+      <li><span class="num">6</span><span>หลักการใช้เครื่องมือทางเศรษฐศาสตร์ (Economic Instruments — EIs)</span></li>
+    </ul>
+    <div class="radio-group">
+      <label class="radio-label">
+        <input type="radio" name="q2" value="agree" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">✓&ensp;เห็นด้วย</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="q2" value="disagree" />
+        <span class="radio-dot"></span>
+        <span class="radio-text">✗&ensp;ไม่เห็นด้วย</span>
+      </label>
+    </div>
+    <div class="reason-wrap" id="reason-q2">
+      <div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div>
+      <textarea name="q2_reason" placeholder="กรุณาระบุเหตุผล…"></textarea>
+    </div>
+  </div>
+
+  <div class="card" id="card-q3">
+    <div class="card-number">ข้อที่ 3</div>
+    <div class="card-question">ผู้รักษาการตามกฎหมาย</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการกำหนดให้ รัฐมนตรีว่าการกระทรวงมหาดไทย รัฐมนตรีว่าการกระทรวงสาธารณสุข และรัฐมนตรีว่าการกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม เป็นผู้รักษาการตามกฎหมายนี้</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q3" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q3" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q3"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q3_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q4">
+    <div class="card-number">ข้อที่ 4</div>
+    <div class="card-question">หน่วยงานระดับนโยบาย</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการกำหนดให้มี <strong>สำนักงานบริหารจัดการขยะมูลฝอยแห่งชาติ</strong> และ <strong>คณะกรรมการบริหาร</strong> มีบทบาทอำนาจหน้าที่ในเชิงนโยบายในฐานะคลังสมองระดับชาติ</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q4" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q4" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q4"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q4_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q5">
+    <div class="card-number">ข้อที่ 5</div>
+    <div class="card-question">กองทุนเพื่อการบริหารจัดการขยะมูลฝอยอย่างยั่งยืน</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการมี "กองทุนฯ" เป็นนิติบุคคล มีฐานะเป็นหน่วยงานของรัฐที่ไม่เป็นส่วนราชการหรือรัฐวิสาหกิจ และรายได้ของกองทุนไม่ต้องนำส่งเป็นรายได้แผ่นดิน</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q5" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q5" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q5"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q5_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q6">
+    <div class="card-number">ข้อที่ 6</div>
+    <div class="card-question">การสนับสนุนจากราชการส่วนกลางและส่วนภูมิภาค</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการกำหนดบทบาทอำนาจหน้าที่ของราชการส่วนกลางและส่วนภูมิภาค ในการสนับสนุนการวิจัย พัฒนาเทคโนโลยี และช่วยเหลือ อปท. ด้านทรัพยากร (บุคลากร ข้อมูล และงบประมาณ)</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q6" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q6" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q6"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q6_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q7">
+    <div class="card-number">ข้อที่ 7</div>
+    <div class="card-question">บทบาทขององค์กรปกครองส่วนท้องถิ่น (อปท.)</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการให้ อปท. มีบทบาทอำนาจหน้าที่และความรับผิดชอบ พร้อมความเป็นอิสระในการบริหารจัดการขยะชุมชนทั่วไป ขยะอันตรายชุมชน ขยะติดเชื้อ และขยะจากสถานประกอบการในพื้นที่</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q7" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q7" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q7"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q7_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q8">
+    <div class="card-number">ข้อที่ 8</div>
+    <div class="card-question">การรับรองสิทธิประชาชนและหน้าที่ผู้ประกอบการ</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการกำหนดหลักประกันสิทธิในสิ่งแวดล้อมที่ดีของประชาชน พร้อมสิทธิเข้าถึงข้อมูล การมีส่วนร่วม และสิทธิในกระบวนการยุติธรรม ควบคู่กับหน้าที่และความรับผิดชอบของภาคเอกชนและผู้ประกอบการ</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q8" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q8" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q8"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q8_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q9">
+    <div class="card-number">ข้อที่ 9</div>
+    <div class="card-question">การตราข้อบัญญัติท้องถิ่น</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการกำหนดให้ อปท. ตราข้อบัญญัติเกี่ยวกับการบริหารจัดการขยะมูลฝอย โดยกำหนดหลักการ กลไก และกระบวนการจัดการขยะประเภทต่างๆ เพื่อบรรลุวัตถุประสงค์กฎหมาย</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q9" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q9" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q9"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q9_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q10">
+    <div class="card-number">ข้อที่ 10</div>
+    <div class="card-question">การมอบหมายและร่วมดำเนินการกับเอกชน</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการให้ อปท. สามารถมอบหมายบุคคลอื่นดำเนินการ หรือร่วมดำเนินการกับเอกชนในรูปแบบ PPP เพื่อพัฒนาระบบและเทคโนโลยี หรือทำความตกลงร่วมกันระหว่าง อปท. ในการจัดการขยะร่วมกัน</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q10" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q10" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q10"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q10_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q11">
+    <div class="card-number">ข้อที่ 11</div>
+    <div class="card-question">เครื่องมือทางเศรษฐศาสตร์</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการกำหนดเครื่องมือทางเศรษฐศาสตร์ เช่น การยกเว้นค่าธรรมเนียม ความช่วยเหลือทางภาษี หรือมาตรการจูงใจอื่นๆ เพื่อให้ทุกภาคส่วนมีส่วนร่วมอย่างเป็นรูปธรรม</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q11" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q11" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q11"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q11_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card" id="card-q12">
+    <div class="card-number">ข้อที่ 12</div>
+    <div class="card-question">มาตรการก่อนการบังคับใช้กฎหมายและบทลงโทษ</div>
+    <div class="card-sub">ท่านเห็นด้วยหรือไม่ กับการกำหนดมาตรการก่อนบังคับใช้ เช่น การไกล่เกลี่ย การออกหนังสือเตือน และบทลงโทษที่เน้นโทษปรับ ปรับเป็นพินัย แทนโทษทางอาญา รวมถึงการไม่จัดสรรเงินให้ อปท. ที่ฝ่าฝืนกฎหมาย</div>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="q12" value="agree" /><span class="radio-dot"></span><span class="radio-text">✓&ensp;เห็นด้วย</span></label>
+      <label class="radio-label"><input type="radio" name="q12" value="disagree" /><span class="radio-dot"></span><span class="radio-text">✗&ensp;ไม่เห็นด้วย</span></label>
+    </div>
+    <div class="reason-wrap" id="reason-q12"><div class="reason-label">เหตุผลประกอบ (ไม่บังคับ)</div><textarea name="q12_reason" placeholder="กรุณาระบุเหตุผล…"></textarea></div>
+  </div>
+
+  <div class="card final-card" id="card-q13">
+    <div class="card-number">ข้อที่ 13</div>
+    <div class="card-question">ความคิดเห็นและข้อเสนอแนะเพิ่มเติม</div>
+    <div class="card-sub">หากท่านมีข้อเสนอแนะ ข้อสังเกต หรือความคิดเห็นเพิ่มเติมเกี่ยวกับร่างกฎหมายฉบับนี้ กรุณาระบุ</div>
+    <textarea name="q13" placeholder="กรุณาระบุความคิดเห็นของท่าน…" rows="5"></textarea>
+  </div>
+
+  <!-- ── Submit ── -->
+  <div class="submit-wrap">
+    <p class="submit-hint">กรุณาตรวจสอบความถูกต้องก่อนส่งแบบสอบถาม</p>
+    <div class="counter-badge">
+      <span class="dot"></span>
+      <span id="counterText">ตอบแล้ว 0 / 12 ข้อ</span>
+    </div>
+    <br />
+    <button type="submit">ส่งแบบสอบถาม</button>
+  </div>
+
+</form>
+
+</main>
+
+<footer>
+  © วิทยาลัยการนิติบัญญัติ สถาบันพระปกเกล้า &nbsp;|&nbsp; แบบสอบถามรับฟังความคิดเห็นผ่านสื่อ
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="survey.js"></script>
+</body>
+</html>
